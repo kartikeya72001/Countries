@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Delhi</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="countries.css">
+    </head>
+<body>
+
+<div class="header">
+  <h1 style="text-align: center; font-size: 3rem;">Delhi</h1>
+</div>
+
+<div class="row">
+  <div class="col-3 col-s-3 menu">
+    <ul>
+      <li onclick="City()" style="font-size: 28px;">The City</li>
+      <li onclick="Food()" style="font-size: 28px;">The Food</li>
+      <li onclick="People()" style="font-size: 28px;">The People</li>
+      <li onclick="Reach()" style="font-size: 28px;">How To Reach</li>
+    </ul>
+  </div>
+
+  <div class="col-6 col-s-9" style="display:block;" id="1">
+    <h1>The City</h1>
+    <p>Delhi, India’s capital territory, is a massive metropolitan area in the country’s north. In Old Delhi, a neighborhood dating to the 1600s, stands the imposing Mughal-era Red Fort, a symbol of India, and the sprawling Jama Masjid mosque, whose courtyard accommodates 25,000 people.</p>
+  </div>
+  <div class="col-6 col-s-9" style="display:none;" id="2">
+    <h1>The Food</h1>
+    <p>What food is Delhi famous for? A. Paranthas, chaat, butter chicken, kebabs, chole bhature, biryani, rolls, samosa, and gol gappa are some of the best food that you must try in Delhi.</p>
+  </div>
+  <div class="col-6 col-s-9" style="display:none;" id="3">
+    <h1>The People</h1>
+    <p>The people of Delhi are referred to as Delhiites or Dilliwalas. The city is referenced in various idioms of the Northern Indo-Aryan languages. The People of Delhi are a mixed bag of Indians, Pakistanis and Immigrants and hence it greatly influences the kind of lifestyle and culture that they follow.</p>
+  </div>
+  <div class="col-6 col-s-9" style="display:none;" id="4">
+    <h1>How To Reach ?</h1>
+    <p>Delhi is well connected by air, railways and roads with all major cities across India. For a comfortable journey you can take a flight to Delhi. Indira Gandhi International Airport is just 20 km away from the city center. The railway stations in Delhi are all well connected with different parts of the city.</p>
+  </div>
+
+  <div class="col-3 col-s-12">
+    <div class="aside">
+      <h2>What?</h2>
+      <p>Delhi is the capital City of India, a nation full of diversity.</p>
+      <h2>Where?</h2>
+      <p>Seated deep in the heart of India, is the National Capital Delhi.</p>
+      <h2>How?</h2>
+      <p>Well Conectted with every means of transport with fair frequency.</p>
+    </div>
+  </div>
+</div>
+<div style="position: relative; margin-left: 20%; margin-right: 20%;">
+        
+    <div class="gallery">
+        <img id="myImg" src="IMG_20190806_085924.jpg" alt="Delhi Metro" width="600" height="400">
+        <div class="desc">Delhi Metro</div>
+    </div>
+
+    <div class="gallery">
+        <img id="myImg" src="IMG_20190811_153347.jpg" alt="Food" width="600" height="400">
+        <div class="desc">Multiple Types of food is Available</div>
+    </div>
+
+    <div class="gallery">
+        <img id="myImg" src="IMG_20190811_161632.jpg" alt="City" width="600" height="400">
+        <div class="desc">City is green and quiet</div> 
+    </div>
+    
+</div>
+    
+    <div id="myModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+    </div>
+
+    <script>
+        function City()
+        {
+            document.getElementById('1').style.display = "block";
+            document.getElementById('2').style.display = "none";
+            document.getElementById('3').style.display = "none";
+            document.getElementById('4').style.display = "none";
+        }
+        function Food()
+        {
+            document.getElementById('2').style.display = "block";
+            document.getElementById('1').style.display = "none";
+            document.getElementById('3').style.display = "none";
+            document.getElementById('4').style.display = "none";
+        }
+        function People()
+        {
+            document.getElementById('3').style.display = "block";
+            document.getElementById('2').style.display = "none";
+            document.getElementById('1').style.display = "none";
+            document.getElementById('4').style.display = "none";
+        }
+        function Reach()
+        {
+            document.getElementById('4').style.display = "block";
+            document.getElementById('2').style.display = "none";
+            document.getElementById('3').style.display = "none";
+            document.getElementById('1').style.display = "none";
+        }
+        //#1
+var modal = document.getElementById("myModal");
+
+var img = document.getElementById("myImg");
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+img.onclick = function(){
+  modal.style.display = "block";
+  modalImg.src = this.src;
+  captionText.innerHTML = this.alt;
+}
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+    </script>
+    
+</body>
+</html>
